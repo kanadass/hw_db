@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS GenreArtist (
 CREATE TABLE IF NOT EXISTS Album (
 	album_id SERIAL PRIMARY KEY,
  	title varchar(80) NOT NULL,
-	release date NOT NULL
+	release_year integer CHECK (release_year >= 2000)
 );
 
  CREATE TABLE IF NOT EXISTS ArtistAlbum (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS Track (
  CREATE TABLE IF NOT EXISTS Collectoin (
 	collectoin_id SERIAL PRIMARY KEY,
  	title varchar(80) NOT NULL,
-	release date NOT NULL
+	release_year integer CHECK (release_year >= 2000)
  );
  	
   CREATE TABLE IF NOT EXISTS TrackCollection (
